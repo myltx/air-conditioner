@@ -21,6 +21,9 @@ importers:
       '@iconify-json/carbon':
         specifier: ^1.2.10
         version: 1.2.10
+      '@types/node':
+        specifier: ^24.0.10
+        version: 24.0.10
       '@types/react':
         specifier: ^19.1.8
         version: 19.1.8
@@ -38,7 +41,7 @@ importers:
         version: 66.3.2
       '@vitejs/plugin-react':
         specifier: ^4.5.2
-        version: 4.6.0(vite@7.0.0(jiti@2.4.2))
+        version: 4.6.0(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))
       eslint:
         specifier: ^9.29.0
         version: 9.30.1(jiti@2.4.2)
@@ -59,10 +62,10 @@ importers:
         version: 8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
       unocss:
         specifier: ^66.3.2
-        version: 66.3.2(postcss@8.5.6)(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
+        version: 66.3.2(postcss@8.5.6)(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
       vite:
         specifier: ^7.0.0
-        version: 7.0.0(jiti@2.4.2)
+        version: 7.0.0(@types/node@24.0.10)(jiti@2.4.2)
 
 packages:
 
@@ -539,6 +542,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/node@24.0.10':
+    resolution: {integrity: sha512-ENHwaH+JIRTDIEEbDK6QSQntAYGtbvdDXnMXnZaZ6k13Du1dPMmprkEHIL7ok2Wl2aZevetwTAb5S+7yIF+enA==}
 
   '@types/react-dom@19.1.6':
     resolution: {integrity: sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw==}
@@ -1338,6 +1344,9 @@ packages:
   unconfig@7.3.2:
     resolution: {integrity: sha512-nqG5NNL2wFVGZ0NA/aCFw0oJ2pxSf1lwg4Z5ill8wd7K4KX/rQbHlwbh+bjctXL5Ly1xtzHenHGOK0b+lG6JVg==}
 
+  undici-types@7.8.0:
+    resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
+
   unocss@66.3.2:
     resolution: {integrity: sha512-u5FPNsjI2Ah1wGtpmteVxWe6Bja9Oggg25IeAatJCoDd1LxtLm0iHr+I0RlSq0ZwewMWzx/Qlmrw7jU0ZMO+0Q==}
     engines: {node: '>=14'}
@@ -1830,6 +1839,10 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
+  '@types/node@24.0.10':
+    dependencies:
+      undici-types: 7.8.0
+
   '@types/react-dom@19.1.6(@types/react@19.1.8)':
     dependencies:
       '@types/react': 19.1.8
@@ -1930,13 +1943,13 @@ snapshots:
       '@typescript-eslint/types': 8.35.1
       eslint-visitor-keys: 4.2.1
 
-  '@unocss/astro@66.3.2(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))':
+  '@unocss/astro@66.3.2(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@unocss/core': 66.3.2
       '@unocss/reset': 66.3.2
-      '@unocss/vite': 66.3.2(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
+      '@unocss/vite': 66.3.2(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
     optionalDependencies:
-      vite: 7.0.0(jiti@2.4.2)
+      vite: 7.0.0(@types/node@24.0.10)(jiti@2.4.2)
     transitivePeerDependencies:
       - vue
 
@@ -2067,7 +2080,7 @@ snapshots:
     dependencies:
       '@unocss/core': 66.3.2
 
-  '@unocss/vite@66.3.2(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))':
+  '@unocss/vite@66.3.2(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@unocss/config': 66.3.2
@@ -2078,11 +2091,11 @@ snapshots:
       pathe: 2.0.3
       tinyglobby: 0.2.14
       unplugin-utils: 0.2.4
-      vite: 7.0.0(jiti@2.4.2)
+      vite: 7.0.0(@types/node@24.0.10)(jiti@2.4.2)
     transitivePeerDependencies:
       - vue
 
-  '@vitejs/plugin-react@4.6.0(vite@7.0.0(jiti@2.4.2))':
+  '@vitejs/plugin-react@4.6.0(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))':
     dependencies:
       '@babel/core': 7.27.7
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.7)
@@ -2090,7 +2103,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.19
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 7.0.0(jiti@2.4.2)
+      vite: 7.0.0(@types/node@24.0.10)(jiti@2.4.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -2746,9 +2759,11 @@ snapshots:
       jiti: 2.4.2
       quansync: 0.2.10
 
-  unocss@66.3.2(postcss@8.5.6)(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3)):
+  undici-types@7.8.0: {}
+
+  unocss@66.3.2(postcss@8.5.6)(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3)):
     dependencies:
-      '@unocss/astro': 66.3.2(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
+      '@unocss/astro': 66.3.2(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
       '@unocss/cli': 66.3.2
       '@unocss/core': 66.3.2
       '@unocss/postcss': 66.3.2(postcss@8.5.6)
@@ -2766,9 +2781,9 @@ snapshots:
       '@unocss/transformer-compile-class': 66.3.2
       '@unocss/transformer-directives': 66.3.2
       '@unocss/transformer-variant-group': 66.3.2
-      '@unocss/vite': 66.3.2(vite@7.0.0(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
+      '@unocss/vite': 66.3.2(vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2))(vue@3.5.17(typescript@5.8.3))
     optionalDependencies:
-      vite: 7.0.0(jiti@2.4.2)
+      vite: 7.0.0(@types/node@24.0.10)(jiti@2.4.2)
     transitivePeerDependencies:
       - postcss
       - supports-color
@@ -2789,7 +2804,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite@7.0.0(jiti@2.4.2):
+  vite@7.0.0(@types/node@24.0.10)(jiti@2.4.2):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.4.6(picomatch@4.0.2)
@@ -2798,6 +2813,7 @@ snapshots:
       rollup: 4.44.1
       tinyglobby: 0.2.14
     optionalDependencies:
+      '@types/node': 24.0.10
       fsevents: 2.3.3
       jiti: 2.4.2
 
