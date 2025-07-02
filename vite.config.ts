@@ -5,6 +5,7 @@ import { presetUno, presetAttributify, presetIcons } from "unocss";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: import.meta.env.VITE_PUBLIC_PATH || "/",
   plugins: [
     react(),
     UnoCSS({
